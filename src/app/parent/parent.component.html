@@ -1,0 +1,37 @@
+<h1>PARENT COMPONENT</h1>
+Name<input type="text" name="fname"><br><br>
+Email<input type="text" name="email"><br><br>
+Phone<input type="number" name="phone"><br><br>
+
+<h1>Address</h1>
+Street:<input type="text" name="street" [(ngModel)]="street"><br><br>
+Landmark:<input type="text" name="landmark" [(ngModel)]="landmark"><br><br>
+Village/City:<input type="text" name="village" [(ngModel)]="village"><br><br>
+Mandal:<input type="text" name="mandal" [(ngModel)]="mandal"><br><br>
+Country:<input type="text" name="country" [(ngModel)]="country"><br><br>
+State:<input type="text" name="state" [(ngModel)]="state"><br><br>
+District:<input type="text" name="district" [(ngModel)]="district"><br><br>
+Pin:<input type="number" name="pin" [(ngModel)]="pin"><br><br>
+
+<h2>If Permanent Address is same as Present Address
+  <input id="ip" type="checkbox" [checked]="check" name="present_checkbox" (change)="update($event)">
+</h2>
+
+
+
+<div id="box">
+<app-child
+[newstreet]="newstreet"
+[newlandmark]="newlandmark"
+[newvillage]="newvillage"
+[newmandal]="newmandal"
+[newcountry]="newcountry"
+[newstate]="newstate"
+[newdistrict]="newdistrict"
+[newpin]="newpin"
+>
+
+</app-child>
+</div>
+
+
